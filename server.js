@@ -5,6 +5,10 @@ const connectDB = require('./config/db');
 // connect to db
 connectDB();
 
+// middleware
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 app.get('/', function( request, response){
   response.json({msg: "Welcome To ContactKeeper"});
 })

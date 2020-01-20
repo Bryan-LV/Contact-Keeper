@@ -4,8 +4,9 @@
   "description": "'A contact manger app'",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "npm start" :"nodemon server"
+    "devServer" : "nodemon server",
+    "client" : "npm start --prefix client",
+    "dev" : "concurrently \"npm run devServer \" \"npm run client \"  "
   },
   "author": "",
   "license": "ISC",
